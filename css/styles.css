@@ -15,6 +15,7 @@ input:focus {
   outline: none; /* Xóa viền focus mặc định */
 }
 
+/* nav */
 nav {
   display: flex;
   align-items: center;
@@ -40,6 +41,7 @@ nav {
 .nav-logo img {
   width: 100%;
   max-width: 15rem;
+  max-height: 10rem;
 }
 
 .nav-option {
@@ -64,6 +66,7 @@ nav {
   max-width: 1.25rem;
 }
 
+/* category */
 .category {
   display: flex;
   justify-content: center;
@@ -89,89 +92,6 @@ nav {
 .category-hover:hover {
   background: #f5ebba;
   border-radius: 0.75rem 0.75rem 0px 0px;
-}
-
-.wrapper {
-  /* background: #ffffff; */
-  margin: 0 auto;
-  max-width: 1080px;
-  width: 100%;
-  min-height: 1000px;
-  margin-top: 1rem;
-}
-
-.banner {
-  max-width: 100%;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.banner img {
-  max-width: 100%;
-  border-radius: 0.75rem;
-}
-.listcard {
-  background: white;
-  padding: 1rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  border-radius: 0.75rem;
-  display: grid; /* Thiết lập phần tử thành grid */
-  gap: 0.75rem;
-  grid-template-columns: repeat(5, 1fr); /* Chia thành 6 cột bằng nhau */
-}
-.list_title {
-  font-size: 1.5rem;
-  font-weight: 650;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  color: #1d2939;
-  margin-left: 1rem;
-}
-
-.card {
-  background: white;
-  border-radius: 0.25rem;
-  overflow: hidden;
-  padding: 1rem;
-  border: 2px;
-  box-shadow: 0px 1px 3px 1px rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-}
-.card a img {
-  max-width: 100%;
-  object-fit: cover;
-  margin: 0.25rem;
-}
-
-.card-info .card-name {
-  font-weight: 500;
-  font-size: small;
-  display: -webkit-box; /* Thiết lập chế độ hiển thị cho WebKit */
-  -webkit-box-orient: vertical; /* Định hướng chiều dọc cho các box */
-  -webkit-line-clamp: 2; /* Giới hạn số dòng hiển thị là 2 */
-  overflow: hidden; /* Ẩn phần nội dung vượt quá */
-  text-overflow: ellipsis; /* Hiển thị dấu ba chấm (...) khi nội dung bị cắt */
-  margin-bottom: 0.5rem; /* Khoảng cách dưới */
-  margin-top: 0.5rem; /* Khoảng cách dưới */
-}
-
-.card-info .card-price {
-  color: red;
-  font-weight: 700;
-}
-
-.card .btnMua {
-  cursor: pointer;
-  width: 100%;
-  margin-top: 0.5rem;
-  background: #f1f8fe;
-  border: #f1f8fe;
-  padding: 0.25rem;
-  font-weight: 700;
-  color: #3188ea;
-  border-radius: 0.25rem;
-  box-shadow: 0 1px 1px 0 rgba(196, 195, 195, 0.1),
-    0 1px 2px -1px rgba(148, 148, 148, 0.1);
 }
 
 .category-hover {
@@ -350,4 +270,144 @@ nav {
 }
 .category-child-banphim-warpper-log span {
   display: block;
+}
+
+/* wrapper */
+.wrapper {
+  /* background: #ffffff; */
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 100%;
+  min-height: 1000px;
+  margin-top: 1rem;
+}
+
+/* banner */
+.banner {
+  max-width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.banner img {
+  max-width: 100%;
+  border-radius: 0.75rem;
+}
+
+/* listcard */
+.listcard {
+  background: white;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  display: grid; /* Thiết lập phần tử thành grid */
+  gap: 0.75rem;
+  grid-template-columns: repeat(5, 1fr); /* Chia thành 6 cột bằng nhau */
+}
+.list_title {
+  font-size: 1.5rem;
+  font-weight: 550;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #1d2939;
+  margin-left: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* card */
+.card {
+  background: white;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  padding: 1rem;
+  border: 2px;
+  box-shadow: 0px 1px 3px 1px rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+.card a img {
+  max-width: 100%;
+  object-fit: cover;
+  margin: 0.25rem;
+}
+
+.card-info .card-name {
+  font-weight: 500;
+  font-size: small;
+  display: -webkit-box; /* Thiết lập chế độ hiển thị cho WebKit */
+  -webkit-box-orient: vertical; /* Định hướng chiều dọc cho các box */
+  -webkit-line-clamp: 2; /* Giới hạn số dòng hiển thị là 2 */
+  overflow: hidden; /* Ẩn phần nội dung vượt quá */
+  text-overflow: ellipsis; /* Hiển thị dấu ba chấm (...) khi nội dung bị cắt */
+  margin-bottom: 0.5rem; /* Khoảng cách dưới */
+  margin-top: 0.5rem; /* Khoảng cách dưới */
+}
+
+.card-info .card-price {
+  color: red;
+  font-weight: 700;
+}
+
+.card .btnMua {
+  cursor: pointer;
+  width: 100%;
+  margin-top: 0.5rem;
+  background: #f1f8fe;
+  border: #f1f8fe;
+  padding: 0.25rem;
+  font-weight: 700;
+  color: #3188ea;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 1px 0 rgba(196, 195, 195, 0.1),
+    0 1px 2px -1px rgba(148, 148, 148, 0.1);
+}
+
+
+
+/* Footer Styles */
+.footer {
+  background-color: #f9f9f9;
+  padding: 1.25rem; /* 20px */
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 75rem; /* 1200px */
+  margin: auto;
+}
+
+.footer-section {
+  margin: 0.625rem; /* 10px */
+  margin-left: 4rem;
+  flex: 1 1 18.75rem; /* 300px */
+}
+
+.footer-section h3 {
+  color: #000;
+  font-size: 1rem; /* 16px */
+  margin-bottom: 0.625rem; /* 10px */
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 0.875rem; /* 14px */
+  color: #333;
+  text-decoration: none;
+  margin: 0.3125rem 0; /* 5px 0 */
+}
+
+.footer-section a {
+  color: #0066cc;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 0.625rem; /* 10px */
+  font-size: 0.75rem; /* 12px */
+  color: #666;
+  border-top: 0.0625rem solid #ddd; /* 1px */
+  margin-top: 1.25rem; /* 20px */
 }
