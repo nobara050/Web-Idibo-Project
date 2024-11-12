@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart</title>
+  </head>
+  <body>
+    <h1>Your Cart</h1>
+
+    <ul id="cartItems"></ul>
+    <p id="totalPrice"></p>
+    <button onclick="clearCart()">Clear Cart</button>
+    <a href="index.html">Go back to Products</a>
+
+    <script src="../js/index.js"></script>
+    <script>
+      // Load cart from localStorage and display it
+      function displayCart() {
+        const cartItems = document.getElementById("cartItems");
+        cartItems.innerHTML = ""; // Clear the list
+
+        let total = 0;
+        for (const [item, details] of Object.entries(cart)) {
+          const itemTotal = details.price * details.quantity;
+          total += itemTotal;
+
+          // Display each item with quantity and price
+          cartItems.innerHTML += `
+                    <li>
+                        ${item} - $${details.price} x ${
+            details.quantity
+          } = $${itemTotal.toFixed(2)}
+                    </li>`;
+        }
+
+        // Display total price
+        document.getElementById(
+          "totalPrice"
+        ).textContent = `Total: $${total.toFixed(2)}`;
+      }
+
+      // Call displayCart when the page loads
+      displayCart();
+
+      // Function to clear the cart
+      function clearCart() {
+        cart = {};
+        localStorage.removeItem("cart");
+        displayCart();
+      }
+    </script>
+  </body>
+</html>
