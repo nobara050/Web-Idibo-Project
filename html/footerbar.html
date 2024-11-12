@@ -3,45 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sản phẩm</title>
+    <title>Footerbar</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
-    <!-- nav -->
-    <nav id="navbar"></nav>
-    <script>
-      function loadNavbar() {
-        fetch("navbar.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("navbar").innerHTML = data;
-          })
-          .catch((error) => console.error("Error loading navbar:", error));
-      }
-    </script>
-    <!-- ul category -->
-    <div id="categorybar"></div>
-    <script>
-      function loadCategoryBar() {
-        fetch("categorybar.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("categorybar").innerHTML = data;
-          })
-          .catch((error) => console.error("Error loading categorybar:", error));
-      }
-    </script>
-    <!-- Load js nav và category -->
-    <script>
-      // Call both functions when the page loads
-      window.onload = function () {
-        loadNavbar();
-        loadCategoryBar();
-      };
-    </script>
-    <!-- wrapper for content -->
-    <div class="wrapper"></div>
-    <!-- footer -->
     <footer class="footer">
       <div class="footer-container">
         <!-- Support Section -->
