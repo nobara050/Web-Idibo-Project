@@ -1,0 +1,118 @@
+.wrapper-cart {
+    background-color: white;
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+}
+
+.cart-title-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.cart-title {
+    font-size: 1rem;
+    font-weight: 550;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #1d2939;
+    margin-left: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.product-container {
+    margin: 12px 0;
+    display: flex;
+
+}
+
+.product-container .image-container {
+    max-width: 120px;
+    margin-right: 16px;
+}
+
+.image-container img {
+    width: 80%;
+    object-fit: cover;
+    padding: 0;
+}
+
+.product-description {
+    display: block;
+
+    width: 100%;
+    font-size: 14px;
+
+}
+
+.price-and-name {
+    display: flex;
+    margin-bottom: 8px;
+    justify-content: space-between;
+
+}
+
+.product-description .product-name {
+    font-weight: bold;
+}
+
+.product-description .product-price {
+
+    color: red;
+}
+
+.additional-function {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.choosenumber {
+
+    float: right;
+    overflow: hidden;
+    position: relative;
+    width: 100px;
+    border: 1px solid #dfdfdf;
+    background: #fff;
+    border-radius: 3px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #333;
+}
+
+.choosenumber .minus {
+    float: left;
+    border-right: 1px solid #dfdfdf;
+    background: #fff;
+    width: 32%;
+    height: 30px;
+    position: relative;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.choosenumber .number {
+    font-size: 14px;
+    color: #333;
+    float: left;
+    width: 33%;
+    height: 30px;
+    text-align: center;
+}
+
+.choosenumber .plus {
+    float: right;
+    border-right: 1px solid #dfdfdf;
+    background: #fff;
+    width: 32%;
+    height: 30px;
+    position: relative;
+    pointer-events: none;
+    cursor: pointer;
+}

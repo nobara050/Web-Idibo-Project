@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <nav id="navbar"></nav>
+    <script>
+      function loadNavbar() {
+        fetch("navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading navbar:", error));
+      }
+    </script>
+    <!-- ul category -->
+    <div id="categorybar"></div>
+    <script>
+      function loadCategoryBar() {
+        fetch("categorybar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("categorybar").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading categorybar:", error));
+      }
+    </script>
+    <!-- wrapper for content -->
+    <div class="wrapper">
+      <div class="cart-title-wrapper">
+        <span class="cart-title">Giỏ hàng</span>
+      </div>
+      <div class="wrapper-cart">
+        <div class="product-container">
+          <div class="image-container">
+            <img src="../img/laptop.jpg" alt="Hình ảnh sản phẩm" />
+          </div>
+          <div class="product-description">
+            <div class="price-and-name">
+              <div class="product-name">
+                Laptop HP 240 G9 i3 1215U/8GB/256GB/Win11 (6L1X7PA)
+              </div>
+              <div class="product-price">8.999.999đ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <foot id="footerbar"></foot>
+    <script>
+      function loadFooterbar() {
+        fetch("footerbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footerbar").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading footerbar:", error));
+      }
+    </script>
+    <!-- Load js navbar, categorybar, footerbar -->
+    <script>
+      // Call both functions when the page loads
+      window.onload = function () {
+        loadNavbar();
+        loadCategoryBar();
+        loadFooterbar();
+      };
+    </script>
+  </body>
+</html>
