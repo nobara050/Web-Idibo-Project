@@ -3,52 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Cart</title>
+    <title>Giỏ hàng - ididong.com</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png" />
   </head>
   <body>
-    <h1>Your Cart</h1>
-
-    <ul id="cartItems"></ul>
-    <p id="totalPrice"></p>
-    <button onclick="clearCart()">Clear Cart</button>
-    <a href="index.html">Go back to Products</a>
-
-    <script src="../js/index.js"></script>
+    <!-- nav -->
+    <nav id="navbar"></nav>
     <script>
-      // Load cart from localStorage and display it
-      function displayCart() {
-        const cartItems = document.getElementById("cartItems");
-        cartItems.innerHTML = ""; // Clear the list
-
-        let total = 0;
-        for (const [item, details] of Object.entries(cart)) {
-          const itemTotal = details.price * details.quantity;
-          total += itemTotal;
-
-          // Display each item with quantity and price
-          cartItems.innerHTML += `
-                    <li>
-                        ${item} - $${details.price} x ${
-            details.quantity
-          } = $${itemTotal.toFixed(2)}
-                    </li>`;
-        }
-
-        // Display total price
-        document.getElementById(
-          "totalPrice"
-        ).textContent = `Total: $${total.toFixed(2)}`;
-      }
-
-      // Call displayCart when the page loads
-      displayCart();
-
-      // Function to clear the cart
-      function clearCart() {
-        cart = {};
-        localStorage.removeItem("cart");
-        displayCart();
+      function loadNavbar() {
+        fetch("navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading navbar:", error));
       }
     </script>
+    <!-- ul category -->
+    <div id="categorybar"></div>
+    <script>
+      function loadCategoryBar() {
+        fetch("categorybar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("categorybar").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading categorybar:", error));
+      }
+    </script>
+    <!-- wrapper for content -->
+    <div class="wrapper">
+      <div class="wraper-cart-title">
+        <span class="cart-title">Giỏ hàng</span>
+      </div>
+      <div class="wrapper-cart-items"></div>
+    </div>
+    <!-- footer -->
+    <footer id="footerbar"></footer>
+    <script>
+      function loadFooterbar() {
+        fetch("footerbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footerbar").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading footerbar:", error));
+      }
+    </script>
+    <!-- Load js navbar, categorybar, footerbar -->
+    <script>
+      // Call both functions when the page loads
+      window.onload = function () {
+        loadNavbar();
+        loadCategoryBar();
+        loadFooterbar();
+        displayCart();
+      };
+    </script>
+    <!-- Load giỏ hàng -->
+    <script src="../js/index.js"></script>
   </body>
 </html>
